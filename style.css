@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(assets/fonts/montserrat-v15-latin-regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(assets/fonts/montserrat-v15-latin-500.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(assets/fonts/montserrat-v15-latin-700.woff2);
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper {
+  background-color: #65BDC0;
+  border-radius: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* sidebar */
+.sidebar {
+  color: #FFF;
+  flex-direction: column;
+  padding-top: 36px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo_link {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 100%;
+  margin-bottom: 50px;
+  /* исправить, не влазиет в экран, должно быть 120 */
+}
+
+li {
+  list-style-type: none;
+}
+
+.main-nav__link {
+  display: block;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+  margin-bottom: 25px;
+  /* исправить, не влазиет в экран, должно быть 42 */
+}
+
+.main-nav__link img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+}
+
+/* content */
+.content {
+  height: 100%;
+  width: calc(100% - 107px);
+  background-color: #FFF;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  padding: 36px 65px;
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+
+}
+
+.search {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #C2C2C2;
+  border-radius: 30px;
+  width: 175px;
+  height: 30px;
+  margin-right: 20px;
+  outline: none;
+}
+
+.search::placeholder {
+  font-family:'Montserrat';
+  color: #C2C2C2;
+  padding-left: 20px;
+}
+
+.user {
+  
+  display: block;
+}
+
+.user-navigation__buttons {
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+.member__title{
+  padding-top: 23px;
+  /* font-family: Lack; */
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.09em;
+  color: #1D2343;
+}
+.member__inner{
+  padding-top: 26px;
+  max-width: 848px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.member__item{
+  width: 252px;
+  height: 314px;
+  background: #EE777F;
+  border-radius: 41px;
+  filter: drop-shadow(0px 4px 40px rgba(238, 119, 127, 0.36));
+  position: relative;
+  margin-bottom: 34px;
+}
+.member__item:nth-child(4){
+  background-color: transparent;
+}
+.member__item-nouser{
+  height: inherit;
+  width: inherit;
+}
+.member__item:nth-child(2)::before,
+.member__item:nth-child(3)::before{
+  content: "";
+  position: absolute;
+  right: 27px;
+  top: 19px;
+  background-image: url(./assets/images/user-icon-before.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  width: 20px;
+  height: 18px;
+}
+.member__item:nth-child(2){
+  background: #65BDC0;
+  filter: drop-shadow(0px 4px 27px rgba(0, 0, 0, 0.1));
+}
+.member__item:nth-child(3){
+  background: #1D2343;
+  filter: drop-shadow(0px 4px 27px rgba(0, 0, 0, 0.1));
+}
+.member__item-top{
+  padding-top: 37px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.member__item-name{
+  /* font-family: Lack; */
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.09em;
+  color: #FFF5F5;
+  padding: 19px 0 7px;
+}
+
+.member__item-number{
+/* font-family: Lack; */
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.member__item-bottom{
+  height: 105px;
+  background: #FFF5F5;
+  padding: 24px;
+    /* font-family: Lack; */
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.09em;
+  color: rgba(29, 35, 67, 0.75);
+  border-bottom-left-radius: 41px;
+  border-bottom-right-radius: 41px;
+}
+.member__item-status{
+  margin-bottom: 13px;
+}
